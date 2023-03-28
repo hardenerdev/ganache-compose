@@ -1,0 +1,5 @@
+# resolvable ip address
+GANACHE_IP=0.0.0.0
+
+# rpc port (defaulting to 8545)
+GANACHE_PORT=8545

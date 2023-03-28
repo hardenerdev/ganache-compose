@@ -1,0 +1,16 @@
+services:
+
+  ganache-chain:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GANACHE_IP: ${GANACHE_IP}
+        GANACHE_PORT: ${GANACHE_PORT}
+    image: ganache
+    container_name: ganache
+    ports:
+      - ${GANACHE_PORT}:${GANACHE_PORT}
+    env_file:
+      - .env
+    restart: on-failure
